@@ -109,7 +109,7 @@ button.link-arrow { padding-inline: 0; padding-bottom: 0; border: 0; background:
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(28, 68, 83, 0.08);
 }
-.site-header .wrap { display: flex; align-items: center; gap: 28px; min-height: 76px; }
+.site-header .wrap { display: flex; align-items: center; gap: 24px; min-height: 76px; }
 
 .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
 .logo__mark svg { display: block; width: 30px; height: 36px; }
@@ -119,19 +119,20 @@ button.link-arrow { padding-inline: 0; padding-bottom: 0; border: 0; background:
 .logo__name { font-size: 1.42rem; font-weight: 900; letter-spacing: -0.035em; line-height: 0.95; }
 .logo__sub { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.24em; text-transform: uppercase; color: var(--flame); line-height: 1; }
 
-.nav { display: flex; gap: 4px; margin-left: auto; }
+.nav { display: flex; gap: 2px; margin-left: auto; }
 .nav a {
-  padding: 8px 14px;
+  padding: 8px 10px;
   border-radius: 999px;
   font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
+  white-space: nowrap;
   transition: background 160ms ease;
 }
 .nav a:hover { background: rgba(28, 68, 83, 0.07); }
 .nav a[aria-current="page"] { background: var(--teal); color: var(--white); }
 
-.header-cta { display: flex; align-items: center; gap: 16px; }
+.header-cta { display: flex; align-items: center; gap: 12px; }
 .header-phone { display: flex; align-items: center; gap: 8px; font-weight: 800; text-decoration: none; white-space: nowrap; }
 .header-phone .icon { width: 18px; height: 18px; color: var(--flame); }
 .header-cta .btn { padding: 11px 22px; }
@@ -357,7 +358,7 @@ td:first-child { font-weight: 700; }
 /* ---------- Page hero (service pages) ---------- */
 .page-hero { padding: 72px 0 84px; }
 .page-hero .wrap { display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: center; }
-.crumbs { display: flex; gap: 8px; list-style: none; font-size: 0.9rem; font-weight: 700; color: rgba(255, 255, 255, 0.7); }
+.crumbs { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; font-size: 0.9rem; font-weight: 700; color: rgba(255, 255, 255, 0.7); }
 .crumbs a { text-decoration: none; }
 .crumbs a:hover { color: var(--white); }
 .crumbs li + li::before { content: "›"; margin-right: 8px; }
@@ -570,6 +571,27 @@ body.modal-open { overflow: hidden; }
   .enquiry__submit { width: 100%; }
 }
 
+/* ---------- Header with six nav links: phone number collapses, then burger menu ---------- */
+@media (max-width: 1248px) {
+  .header-phone span { display: none; }
+}
+@media (max-width: 1180px) {
+  .nav-toggle { display: grid; }
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    padding: 12px 24px 20px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav.is-open { display: flex; }
+  .nav a { padding: 12px 14px; font-size: 1rem; }
+}
+
 /* ---------- Blog ---------- */
 .card__more { margin-top: 16px; font-size: 0.92rem; font-weight: 700; color: var(--teal-mid); text-underline-offset: 3px; }
 .card__more:hover { color: var(--flame); }
@@ -601,8 +623,9 @@ body.modal-open { overflow: hidden; }
 .post-card .link-arrow { margin-top: auto; padding-top: 20px; }
 
 .page-hero--post h1 { font-size: clamp(2.1rem, 4.2vw, 3.2rem); }
-.post-meta { display: flex; flex-wrap: wrap; gap: 6px 0; font-size: 0.95rem !important; font-weight: 700; color: rgba(255, 255, 255, 0.78) !important; }
-.post-meta > * + *::before { content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 14px 2px; border-radius: 50%; background: var(--mint); vertical-align: middle; }
+.post-meta { font-size: 0.95rem !important; font-weight: 700; color: rgba(255, 255, 255, 0.78) !important; }
+.post-meta > * { white-space: nowrap; }
+.post-meta > * + *::before { content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 12px 2px; border-radius: 50%; background: var(--mint); vertical-align: middle; }
 
 .prose { max-width: 760px; margin: 0 auto; font-size: 1.08rem; line-height: 1.7; }
 .prose > * + * { margin-top: 18px; }
