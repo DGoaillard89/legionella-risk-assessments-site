@@ -3,10 +3,10 @@
 // Submissions go to the Cloudflare Worker relay "konda-enquiries", which holds
 // the Airtable token and creates the CRM record. The token is NEVER in this site.
 //
-// ENQUIRY_ENDPOINT stays empty until the relay has been checked for this domain.
-// While it's empty, the form asks visitors to phone instead of failing silently.
+// This domain is in the relay's ALLOWED_ORIGINS (worker/wrangler.toml in the Konda repo).
+// If ENQUIRY_ENDPOINT is ever emptied, the form asks visitors to phone instead.
 // ---------------------------------------------------------------------------
-const ENQUIRY_ENDPOINT = "";
+const ENQUIRY_ENDPOINT = "https://konda-enquiries.daniel-10c.workers.dev";
 const ENQUIRY_TYPE = "Legionella Risk Assessments";
 const PHONE = "020 3633 6064";
 
