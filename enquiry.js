@@ -61,7 +61,7 @@ const PHONE = "020 3633 6064";
         <span class="enquiry__submit-label">Send enquiry</span>
         <span class="enquiry__spinner" aria-hidden="true"></span>
       </button>
-      <p class="enquiry__small">Prefer to talk? Call <a href="tel:+442036336064">${PHONE}</a>. We only use your details to respond to this enquiry. See our <a href="privacy.html">privacy notice</a>.</p>
+      <p class="enquiry__small">Prefer to talk? Call <a href="tel:+442036336064">${PHONE}</a>. We only use your details to respond to this enquiry. See our <a href="/privacy.html">privacy notice</a>.</p>
     </form>
 
     <div class="enquiry__done" id="enquiry-done" hidden>
