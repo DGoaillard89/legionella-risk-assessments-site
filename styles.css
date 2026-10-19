@@ -111,19 +111,13 @@ button.link-arrow { padding-inline: 0; padding-bottom: 0; border: 0; background:
 }
 .site-header .wrap { display: flex; align-items: center; gap: 28px; min-height: 76px; }
 
-.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; line-height: 1.05; }
-.logo__mark {
-  display: grid;
-  place-items: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background: var(--teal);
-  color: var(--mint);
-}
-.logo__mark .icon { width: 26px; height: 26px; }
-.logo__text { font-size: 1.02rem; }
-.logo__text small { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--flame); }
+.logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.logo__mark svg { display: block; width: 30px; height: 36px; }
+.logo__drop { fill: var(--teal); }
+.logo__tick { fill: none; stroke: var(--mint); stroke-width: 3.6; stroke-linecap: round; stroke-linejoin: round; }
+.logo__text { display: flex; flex-direction: column; gap: 3px; }
+.logo__name { font-size: 1.42rem; font-weight: 900; letter-spacing: -0.035em; line-height: 0.95; }
+.logo__sub { font-size: 0.66rem; font-weight: 800; letter-spacing: 0.24em; text-transform: uppercase; color: var(--flame); line-height: 1; }
 
 .nav { display: flex; gap: 4px; margin-left: auto; }
 .nav a {
@@ -420,7 +414,9 @@ td:first-child { font-weight: 700; }
 .site-footer { padding: 72px 0 32px; background: var(--teal-deep); color: rgba(255, 255, 255, 0.78); font-size: 0.96rem; }
 .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; }
 .site-footer .logo { color: var(--white); }
-.site-footer .logo__mark { background: var(--teal-mid); }
+.site-footer .logo__drop { fill: var(--mint); }
+.site-footer .logo__tick { stroke: var(--teal-deep); }
+.site-footer .logo__sub { color: var(--mint); }
 .site-footer h4 { margin-bottom: 14px; color: var(--white); font-size: 1rem; }
 .site-footer ul { list-style: none; display: grid; gap: 8px; }
 .site-footer a { text-decoration: none; }
