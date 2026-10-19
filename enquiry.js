@@ -7,7 +7,7 @@
 // While it's empty, the form asks visitors to phone instead of failing silently.
 // ---------------------------------------------------------------------------
 const ENQUIRY_ENDPOINT = "";
-const ENQUIRY_TYPE = "Legionella Risk Assessment";
+const ENQUIRY_TYPE = "Legionella Risk Assessments";
 const PHONE = "020 3633 6064";
 
 (() => {
