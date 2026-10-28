@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /_tools/
 
 Sitemap: https://legionella-risk-assessments.com/sitemap.xml
